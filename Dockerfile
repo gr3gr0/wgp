@@ -8,6 +8,9 @@ ENV HOME /root
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
+RUN usermod -u 99 nobody && \
+    usermod -g 100 nobody
+
 RUN apt-get update && apt-get install -qy mono-complete sudo unzip wget nano cron
 
 #Download and extract
