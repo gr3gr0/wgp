@@ -2,7 +2,7 @@
 
 #Check if Webgrab++ config file exists in config folder. Copy to config if non-existent.
 if [ ! -f /config/WebGrab++.config.xml ]; then
-  cp /webgrab/assets/WebGrab++.config.xml /config/
+  cp /webgrab/scripts/WebGrab++.config.xml /config/
 fi
 
 #Check if mdb folder exists ...
