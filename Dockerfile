@@ -11,9 +11,6 @@ ENV HOME /root
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
-RUN usermod -u 99 nobody && \
-    usermod -g 100 nobody
-
 RUN apt-get update && apt-get install -qy mono-complete sudo unzip wget nano cron
 
 #Download and extract
@@ -34,7 +31,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #Add scripts & config
 ADD ./scripts/startup.sh ./scripts/mycron ./scripts/WebGrab++.config.xml /webgrab/scripts/
 RUN chmod -R +x /webgrab/ && \
-    crontab -u nobody /webgrab/scripts/mycron && \
+    crontab /webgrab/scripts/mycron && \
     mkdir -p /etc/my_init.d && \
     cp /webgrab/scripts/startup.sh /etc/my_init.d/ 
 
