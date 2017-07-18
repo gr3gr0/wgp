@@ -1,9 +1,12 @@
-FROM debian:latest
+FROM phusion/baseimage:latest
 MAINTAINER gregro
 ENV DEBIAN_FRONTEND noninteractive
 
 # Set correct environment variables.
 ENV HOME /root
+
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]
 
 RUN apt-get update && apt-get install -qy mono-complete sudo unzip wget nano cron
 
