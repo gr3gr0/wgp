@@ -1,1 +1,1 @@
-02 02 * * * mono /webgrab/bin/WebGrab+Plus.exe "/config" 2>&1 | /usr/bin/logger -t WebGrab++
+30 11 * * * mono /webgrab/bin/WebGrab+Plus.exe "/config" 2>&1 | /usr/bin/logger -t WebGrab++
