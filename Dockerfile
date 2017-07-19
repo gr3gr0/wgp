@@ -7,9 +7,6 @@ RUN cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 # Set correct environment variables.
 ENV HOME /root
 
-# Use baseimage-docker's init system.
-CMD ["/sbin/my_init"]
-
 RUN apt-get update && apt-get install -qy mono-complete sudo unzip wget nano cron
 
 #Download and extract
