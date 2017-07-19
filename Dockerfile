@@ -1,15 +1,9 @@
-FROM phusion/baseimage:latest
+FROM debian:latest
 MAINTAINER gregro
 ENV DEBIAN_FRONTEND noninteractive
 
-#Disable the SSH server
-RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
-
 # Set correct environment variables.
 ENV HOME /root
-
-# Use baseimage-docker's init system.
-#CMD ["/sbin/my_init"]
 
 RUN apt-get update && apt-get install -qy mono-complete sudo unzip wget nano cron
 
