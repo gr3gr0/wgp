@@ -2,7 +2,7 @@ FROM phusion/baseimage
 MAINTAINER gregro
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+#RUN cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 # Set correct environment variables.
 ENV HOME /root
