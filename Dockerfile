@@ -1,11 +1,8 @@
-FROM phusion/baseimage:latest
+FROM debian:latest
 MAINTAINER gregro
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-
-#Disable the SSH server
-RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 # Set correct environment variables.
 ENV HOME /root
