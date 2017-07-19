@@ -8,10 +8,10 @@ RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 # Set correct environment variables.
 ENV HOME /root
 
-# Use baseimage-docker's init system.
+# Use docker's init system.
 CMD ["/sbin/my_init"]
 
-#Change uid & gid to match Unraid
+#Change uid & gid
 RUN usermod -u 99 nobody && \
     usermod -g 100 nobody
 
