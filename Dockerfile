@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM phusion/baseimage
 MAINTAINER gregro
 ENV DEBIAN_FRONTEND noninteractive
 
