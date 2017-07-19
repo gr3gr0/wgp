@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 
 # Use baseimage-docker's init system.
-CMD ["/sbin/my_init"]
+#CMD ["/sbin/my_init"]
 
 RUN apt-get update && apt-get install -qy mono-complete sudo unzip wget nano cron
 
